@@ -28,11 +28,15 @@ All requirements is detailed in requirements.txt.
 
 ### YOLOv3
 
-Using mmdetection.
+Using mmdetection to train YOLOv3.
 
 Follow the [Installation](https://github.com/open-mmlab/mmdetection/blob/master/docs/get_started.md) in mmdetection to set up the environment.
     
 Move the wheat_mmdetection/configs/wheat/ folder into mmdetection/configs/.
+
+### YOLOv4-CSP
+
+### Faster RCNN
 
 ### Coding Style
 Use PEP8 guidelines.
@@ -50,36 +54,48 @@ The data directory is structured as:
 ```
 
 ## Train
-Train in YOLOv3. (The root is in the mmdetection)
+1. Train in YOLOv3. (The root is in the mmdetection)
 
+    
     $ python3 tools/train.py configs/wheat/pre_yolov3_1024_norm.py --gpu-ids 8 --work-dir "work_dirs/data_gamma_yolov3_1024"
 
-Argument
- - `--gpu-ids` the ids of gpus to use
- - `--work-dir` the path to store the checkpoints and config setting
+    Argument
+    - `--gpu-ids` the ids of gpus to use
+    - `--work-dir` the path to store the checkpoints and config setting
+
+2. Train in Faster RCNN. (The root is in the Faster_R-CNN)
+
+    $ python Faster_R-CNN_training.py
+
+    or 
+
+    $ python Faster_R-CNN_aug.py
+
+3. Train in YOLOv4-CSP. (The root is in the YOLOv4-CSP)
+
 
 ## Inference (on kaggle)
 [YOLOv3](./inference_kaggle/YOLOv3.ipynb)
 
-[YOLOv4-csp](./inference_kaggle/)
+[YOLOv4-csp](./inference_kaggle/YOLOv4-CSP.ipynb)
 
 [YOLOv4-csp with pseudo-labeled from test data](./inference_kaggle/)
 
-[Faster RCNN](./inference_kaggle/)
+[Faster RCNN](./inference_kaggle/faster-r-cnn-aug.ipynb)
 
 [Ensemble four models](./inference_kaggle/ensemble.ipynb)
 
 ## Citation
 ```
 @article{mmdetection,
-  title   = {{MMDetection}: Open MMLab Detection Toolbox and Benchmark},
-  author  = {Chen, Kai and Wang, Jiaqi and Pang, Jiangmiao and Cao, Yuhang and
-             Xiong, Yu and Li, Xiaoxiao and Sun, Shuyang and Feng, Wansen and
-             Liu, Ziwei and Xu, Jiarui and Zhang, Zheng and Cheng, Dazhi and
-             Zhu, Chenchen and Cheng, Tianheng and Zhao, Qijie and Li, Buyu and
-             Lu, Xin and Zhu, Rui and Wu, Yue and Dai, Jifeng and Wang, Jingdong
-             and Shi, Jianping and Ouyang, Wanli and Loy, Chen Change and Lin, Dahua},
-  journal= {arXiv preprint arXiv:1906.07155},
+  title={{MMDetection}: Open MMLab Detection Toolbox and Benchmark},
+  author={Chen, Kai and Wang, Jiaqi and Pang, Jiangmiao and Cao, Yuhang and
+          Xiong, Yu and Li, Xiaoxiao and Sun, Shuyang and Feng, Wansen and
+          Liu, Ziwei and Xu, Jiarui and Zhang, Zheng and Cheng, Dazhi and
+          Zhu, Chenchen and Cheng, Tianheng and Zhao, Qijie and Li, Buyu and
+          Lu, Xin and Zhu, Rui and Wu, Yue and Dai, Jifeng and Wang, Jingdong
+          and Shi, Jianping and Ouyang, Wanli and Loy, Chen Change and Lin, Dahua},
+  journal={arXiv preprint arXiv:1906.07155},
   year={2019}
 }
 

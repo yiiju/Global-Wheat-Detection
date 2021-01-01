@@ -32,13 +32,13 @@ And let file position like
 ## Training
 
 ```
-python Faster R-CNN training.py
+python Faster_R-CNN_training.py
 ```
 
 or 
 
 ```
-python Faster R-CNN aug.py
+python Faster_R-CNN_aug.py
 ```
 
 ## Inference
