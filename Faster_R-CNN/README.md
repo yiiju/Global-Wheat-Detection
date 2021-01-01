@@ -43,5 +43,4 @@ python Faster_R-CNN_aug.py
 
 ## Inference
 
-Testing on [kaggle](https://www.kaggle.com/c/global-wheat-detection/overview) with `faster-r-cnn-inferenece.ipynb` or `faster-r-cnn-inferenece-aug.ipynb`
-
+Testing on [kaggle](https://www.kaggle.com/c/global-wheat-detection/overview) with `faster-r-cnn.ipynb` or `faster-r-cnn-aug.ipynb` in the [inference_kaggle](../inference_kaggle) folder.

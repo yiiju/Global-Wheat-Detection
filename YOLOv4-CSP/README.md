@@ -142,7 +142,8 @@ or you can change to your own suitable parameters
 
 ## Testing 
 
-Infer on kaggle by `yolov4-csp-inference.ipynb`
+Infer on kaggle by `YOLOv4-CSP.ipynb` in the [inference_kaggle](../inference_kaggle) folder.
+
 # Reference
 
 [YOLOv4-CSP](https://github.com/WongKinYiu/ScaledYOLOv4/tree/yolov4-csp)

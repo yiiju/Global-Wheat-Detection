@@ -36,7 +36,7 @@ Move the wheat_mmdetection/configs/wheat/ folder into mmdetection/configs/.
 
 ### YOLOv4-CSP
 
-### Faster RCNN
+Follow the [Installation](./YOLOv4-CSP/README.md) to set up the environment.
 
 ### Coding Style
 Use PEP8 guidelines.
@@ -57,7 +57,9 @@ The data directory is structured as:
 1. Train in YOLOv3. (The root is in the mmdetection)
 
     
-    $ python3 tools/train.py configs/wheat/pre_yolov3_1024_norm.py --gpu-ids 8 --work-dir "work_dirs/data_gamma_yolov3_1024"
+    ```
+    python3 tools/train.py configs/wheat/pre_yolov3_1024_norm.py --gpu-ids 8 --work-dir "work_dirs/data_gamma_yolov3_1024"
+    ```
 
     Argument
     - `--gpu-ids` the ids of gpus to use
@@ -65,14 +67,29 @@ The data directory is structured as:
 
 2. Train in Faster RCNN. (The root is in the Faster_R-CNN)
 
-    $ python Faster_R-CNN_training.py
+    More detailed is in [here](./Faster_R-CNN/README.md)
 
+    ```
+    python Faster_R-CNN_training.py
+    ```
     or 
-
-    $ python Faster_R-CNN_aug.py
+    ```
+    python Faster_R-CNN_aug.py
+    ```
 
 3. Train in YOLOv4-CSP. (The root is in the YOLOv4-CSP)
 
+    More detailed is in [here](./YOLOv4-CSP/README.md)
+
+    For train on one GPU
+    ```
+    sh sigle-train.sh
+    ```
+
+    For train on multiple GPU 
+    ```
+    sh multi-train.sh
+    ```
 
 ## Inference (on kaggle)
 [YOLOv3](./inference_kaggle/YOLOv3.ipynb)
@@ -104,5 +121,12 @@ The data directory is structured as:
   author={Solovyev, Roman and Wang, Weimin and Gabruseva, Tatiana},
   journal={arXiv preprint arXiv:1910.13302},
   year={2019}
+}
+
+@article{wang2020scaled,
+  title={{Scaled-YOLOv4}: Scaling Cross Stage Partial Network},
+  author={Wang, Chien-Yao and Bochkovskiy, Alexey and Liao, Hong-Yuan Mark},
+  journal={arXiv preprint arXiv:2011.08036},
+  year={2020}
 }
 ```
