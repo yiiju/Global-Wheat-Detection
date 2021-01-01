@@ -1,0 +1,11 @@
+python3 mytest.py --weights ./weight/42_126.pt \
+	        --data data/wheat.yaml \
+		--img-size 1024 \
+		--cfg models/yolov4-csp_1024.cfg \
+		--batch-size 10 \
+		--augment \
+		--device 6 \
+		--names yolov4-csp \
+		--task test \
+		--conf 0.3 \
+		--merge
